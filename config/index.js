@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv-flow').config();
 
 const config = {
   dev: process.env.NODE_ENV !== 'production',
