@@ -8,11 +8,15 @@ const {
   wrapErrors,
   errorHandler,
 } = require('./utils/middleware/errorHandlers');
+const helmet = require('helmet');
 
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // body parser
 app.use(express.json());
+
+// Helmet
+app.use(helmet());
 
 // routes
 moviesAPI(app);
